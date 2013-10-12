@@ -6,10 +6,10 @@
 var app = (function ($) {
     'use strict';
 
-    var _files, _context, _source, _gainNode, _pannerNode, _init, _loadSound, _playSound;
+    var _files, _context, _source, _gainNode, _pannerNode, _init, _listFilesInMusicDir, _loadSound, _playSound;
 
     _init = function () {
-        var onListItemClickListener, onPlayButtonClickListener, onVolumeChangeListener, onPannerChangeListener, initializeUI;
+        var onListItemClickListener, onPlayButtonClickListener, onVolumeChangeListener, onPannerChangeListener, generateFilesList, initializeUI;
 
         _context = new webkitAudioContext(); /* Create contex object. */
         _source = null;
@@ -33,8 +33,23 @@ var app = (function ($) {
             };
 
             app.loadSound(file, function () {
-            	console.log("playing");
                 app.playSound(a.data('name'));
+            });
+        };
+
+        /* onPlayButtonClickListener plays the sound from external URL. */
+        onPlayButtonClickListener = function () {
+            var url, file;
+
+            url = $('#external').val();
+
+            file = {
+                name : 'external',
+                uri : url
+            };
+
+            app.loadSound(file, function () {
+                app.playSound('external');
             });
         };
 
@@ -50,23 +65,93 @@ var app = (function ($) {
             _pannerNode.setPosition(this.value, 0, 0);
         };
         
+        generateFilesList = function (files) {
+            var ul, li, span, a;
+
+            ul = $('#music-files');
+
+            if (files.length > 0) {
+                $.each(files, function (i, file) {
+                    li = $('<li/>');
+                    a = $('<a/>');
+                    a.attr('data-role', 'none');
+                    a.text(file.name);
+                    a.data('name', file.name);
+                    a.data('uri', file.toURI());
+                    li.append(a);
+                    ul.append(li);
+                });
+            } else {
+                li = $('<li/>');
+                span = $('<span/>');
+                span.addClass('empty');
+                span.text('No sound files in Music directory');
+                li.append(span);
+                ul.append(li);
+            }
+
+            /* Initialize all fields. */
+            initializeUI();
+        };
+
         /* Function initializes all fields in the application. */
         initializeUI = function () {
             $('#close').on('click', function() {
                 tizen.application.getCurrentApplication().exit();
             });
 
+            /* Initialize input for external resource. */
+            $('#play').on('click', onPlayButtonClickListener);
+
             /* Initialize all lists. */
-            $('.key').each(function() {
+            $('li a').each(function() {
                 $(this).on('click', onListItemClickListener);
             });
 
             /* Initialize volume field. */
             $('#volume').on('change', onVolumeChangeListener);
 
+            /* Initialize panner field. */
+            $('#panner').on('change', onPannerChangeListener);
         };
 
-        initializeUI();
+        /* Generate list of sound files stored in Music directory. */
+        app.listFilesInMusicDir(generateFilesList);
+    };
+
+    _listFilesInMusicDir = function (onSuccess, onError) {
+        var onMusicResolveSuccess, onListFilesSuccess;
+        
+        onMusicResolveSuccess = function (dir) {
+            dir.listFiles(onListFilesSuccess, onError);
+        };
+        
+        onListFilesSuccess = function (files) {
+            var soundFiles;
+
+            soundFiles = [];
+            
+            /* Loop through all files and get only that with supported
+             * formats */
+            $.each(files, function (i, file) {
+                var name, extension;
+                
+                name = file.name;
+                extension = name.substr(name.lastIndexOf('.') + 1);
+
+                if (file.isFile && [ 'mp3', 'wav', 'ogg' ].indexOf(extension) > -1) {
+                    soundFiles.push(file);
+                }
+            });
+            
+            onSuccess(soundFiles);
+        };
+
+        try {
+            tizen.filesystem.resolve('music', onMusicResolveSuccess, onError);
+        } catch (e) {
+            tlib.logger.err(e);
+        }
     };
 
     _loadSound = function (file, successCallback, errorCallback) {
@@ -189,7 +274,12 @@ var app = (function ($) {
          * Initiates user interface and generate files list.
          */
         init : _init,
-        
+        /**
+         * List files in 'Music' directory.
+         * @param {Function} onSuccess Function executed on success
+         * @param {Function} onError Function executed on error
+         */
+        listFilesInMusicDir : _listFilesInMusicDir,
         /**
          * Load sound file specified by the file parameter.
          * @param {Object} file It should be object with two properties 'name' - internal file name in the list and 'uri' - uri/url to the file.

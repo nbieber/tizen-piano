@@ -1,47 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<style>
-			body {
-				margin: 0;
-			}
-
-			#piano {
-				position: relative;
-			}
-
-			.key {
-				border: 5px rgb(112, 112, 112) outset;
-				display: inline-block;	
-			}
-
-			.key.white {
-				background-color: white;
-				height: 200px;
-				width: 10%;
-			}
-
-			.key.white:active, .key.black:active{
-				border-style: solid;
-				border-color: black;
-			}
-
-			.key.black {
-				height: 120px;
-				width: 30px;
-				position: absolute;
-				top: 0;
-				background-color: black;
-				margin-left: -22px;
-			}
-
-		</style>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
+	<title>TizenPiano</title>
 	<body>
+		<header>
+			TizenPiano
+		</header>
 		<div id="piano">
-			<div class="key white" onclick="playSound('audio/3C.mp3')"></div>
-			<div class="key black" onclick="playSound('audio/3Cs.mp3')"></div>
-			<div class="key white" onclick="playSound('audio/3D.mp3')"></div>
+			<a data-name="app-beep" data-uri="./audio/3Cs.mp3" data-role="none"><div class="key white"></div></a>
+			<div class="key black"></div>
+			<div class="key white"></div>
 			<div class="key black" onclick="playSound('audio/3Ds.mp3')"></div>
 			<div class="key white" onclick="playSound('audio/3E.mp3')"></div>
 			<div class="key white" onclick="playSound('audio/3F.mp3')"></div>
@@ -58,7 +28,8 @@
 
 		</div>
 
-		<script type="text/javascript" src="js/music.js"></script>
+		<script type="text/javascript" src="js/jquery-1.9.0.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
 
