@@ -4,14 +4,14 @@
 
 body {
 	margin: 0;
-	background-color: #7279D8;
+	background: url(../images/grey.png);
 }
 	
 header {
 	width: 100%;
-	height: 30px;
-	background-color: #2F3584;
-	font-size: 24px;
+	height: 40px;
+	background-color: black;
+	font-size: 36px;
 	color: white;
 	padding-left: 8px;	
 }
@@ -21,9 +21,8 @@ header {
 }
 
 .key {
-	border: 5px rgb(112, 112, 112) outset;
+	border: 1px solid black;
 	display: inline-block;
-	-webkit-tap-highlight-color: pink;	
 }
 
 .key.white {
@@ -32,16 +31,19 @@ header {
 	width: 10%;
 }
 
-.key.white:active, .key.black:active{
-	border-style: solid;
-	border-color: black;
+.key.white:active {
+	background-color: aliceblue;
+}
+
+.key.black:active {
+	background-color: #4A4A4A;
 }
 
 .key.black {
 	height: 180px;
-	width: 30px;
+	width: 40px;
 	position: absolute;
 	top: 0;
 	background-color: black;
-	margin-left: -22px;
+	margin-left: -24px;
 }

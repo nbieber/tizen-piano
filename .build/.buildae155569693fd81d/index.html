@@ -9,26 +9,29 @@
 			TizenPiano
 		</header>
 		<div id="piano">
-			<a data-name="app-beep" data-uri="./audio/3Cs.mp3" data-role="none"><div class="key white"></div></a>
-			<div class="key black"></div>
-			<div class="key white"></div>
-			<div class="key black" onclick="playSound('audio/3Ds.mp3')"></div>
-			<div class="key white" onclick="playSound('audio/3E.mp3')"></div>
-			<div class="key white" onclick="playSound('audio/3F.mp3')"></div>
-			<div class="key black" onclick="playSound('audio/3Fs.mp3')"></div>
-			<div class="key white" onclick="playSound('audio/3G.mp3')"></div>
-			<div class="key black" onclick="playSound('audio/3Gs.mp3')"></div>
-			<div class="key white" onclick="playSound('audio/3A.mp3')"></div>
-			<div class="key black" onclick="playSound('audio/3As.mp3')"></div>
-			<div class="key white" onclick="playSound('audio/3B.mp3')"></div>
-			<div class="key white" onclick="playSound('audio/4C.mp3')"></div>
-			<span id="dummy"></span>
+			<div class="key white" data-name="app-3C" data-uri="./audio/3C.mp3" data-role="none"></div>
+			<div class="key black" data-name="app-3Cs" data-uri="./audio/3Cs.mp3" data-role="none"></div>
+			<div class="key white" data-name="app-3D" data-uri="./audio/3D.mp3" data-role="none"></div>
+			<div class="key black" data-name="app-3Ds" data-uri="./audio/3Ds.mp3" data-role="none"></div>
+			<div class="key white" data-name="app-3E" data-uri="./audio/3E.mp3" data-role="none"></div>
+			<div class="key white" data-name="app-3F" data-uri="./audio/3F.mp3" data-role="none"></div>
+			<div class="key black" data-name="app-3Fs" data-uri="./audio/3Fs.mp3" data-role="none"></div>
+			<div class="key white" data-name="app-3G" data-uri="./audio/3G.mp3" data-role="none"></div>
+			<div class="key black" data-name="app-3Gs" data-uri="./audio/3Gs.mp3" data-role="none"></div>
+			<div class="key white" data-name="app-3A" data-uri="./audio/3A.mp3" data-role="none"></div>
+			<div class="key black" data-name="app-3As" data-uri="./audio/3As.mp3" data-role="none"></div>
+			<div class="key white" data-name="app-3B" data-uri="./audio/3B.mp3" data-role="none"></div>
+			<div class="key white" data-name="app-4C" data-uri="./audio/4C.mp3" data-role="none"></div>
 		</div>
-		<div id="audio">
 
-		</div>
+		<script type="text/javascript" src="./js/libs/tlib/tlib.js"></script>
+        <script type="text/javascript" src="./js/libs/tlib/tlib.logger.js"></script>
+        <script type="text/javascript" src="./js/libs/tlib/tlib.network.js"></script>
+        <script type="text/javascript" src="./js/libs/tlib/tlib.view.js"></script>
+        
 
 		<script type="text/javascript" src="js/jquery-1.9.0.js"></script>
+		<script type="text/javascript" src="./js/jquery.mobile-1.3.0.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

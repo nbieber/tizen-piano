@@ -54,13 +54,45 @@
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>4zeMierfIgT7WECvD1HQBBcJjcvrKRa+alLtWyPk6b0=</DigestValue>
 </Reference>
-<Reference URI="icon.png">
+<Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>1d0oEZHqPn+QzNzGIHwj9ODby6x9ggFs9uOsav6jPNs=</DigestValue>
+<DigestValue>rZPElbM+fwcu8GLEvtZ7q45sEPmqz3pzPedDG/eL/h8=</DigestValue>
 </Reference>
-<Reference URI="js/main.js">
+<Reference URI="images/bgnoise_lg.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>JBe+oErf7ZYCMvq3uVNx5Wx7lgM4inwBR5KHRWOkp4k=</DigestValue>
+<DigestValue>09dYw2MvWsHvW2zd9QlBypt5l//ki+8wIp6/jug1y1A=</DigestValue>
+</Reference>
+<Reference URI="images/binding_dark.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>3op/upcjpJleKge95ZWGC2cbpKD682GiNQmrl8tHl68=</DigestValue>
+</Reference>
+<Reference URI="images/grey.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>uBHcPV1ha/yRx76QiSf1eX2zh4717tKOAnftQPXCqbo=</DigestValue>
+</Reference>
+<Reference URI="js/jquery-1.9.0.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>TXsBwvYEO87oOjPQ9ifcb7wn3IrrW91dhj6EMEtRLvM=</DigestValue>
+</Reference>
+<Reference URI="js/jquery.mobile-1.3.0.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>zi+KbmxtoEMvUY8oOBXMBGPXI9q/NGuaYlGHvUf9uxk=</DigestValue>
+</Reference>
+<Reference URI="js/libs/tlib/tlib.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>7dA3fLsubJ/xQFXn68jIMNFiH1XjR0Jj1EOcbrgBFko=</DigestValue>
+</Reference>
+<Reference URI="js/libs/tlib/tlib.logger.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>QlcCacwC7+ZGdyian6ATYA31YfktCN4u+BxUIuxlpEU=</DigestValue>
+</Reference>
+<Reference URI="js/libs/tlib/tlib.network.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>kzeVIVxXsjJ9Fmu8Z8I6mLi9TT8q9wk3r5C1j0IFBnQ=</DigestValue>
+</Reference>
+<Reference URI="js/libs/tlib/tlib.view.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>cNerIR0C7p6KTvWJKqDfdTy125PkP/jw+efntyz6AtE=</DigestValue>
 </Reference>
 <Reference URI="keyboard.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -70,21 +102,65 @@
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>Q3UMpsu+I4l83bJW+jl1n5fPI7SxhlAx/rSBieNK7xQ=</DigestValue>
 </Reference>
-<Reference URI="config.xml">
+<Reference URI="js/main.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>rZPElbM+fwcu8GLEvtZ7q45sEPmqz3pzPedDG/eL/h8=</DigestValue>
+<DigestValue>dAyLfOA1EzM9rq5j1LCvOtY4+oyBwcajrUHYavY/6dY=</DigestValue>
+</Reference>
+<Reference URI="audio/2A.mp3">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>+DbatYmLawZ8+JNR+aby16c3DisMn02ymp93j85K590=</DigestValue>
+</Reference>
+<Reference URI="audio/2As.mp3">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>yfY8wYxAv8uRbO55nvBa6W+JiBE9D+OBw4KD1e11SSk=</DigestValue>
+</Reference>
+<Reference URI="audio/2B.mp3">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>iVP5ysjZ1Hwn2VB3pZa0dkBkOhk+rpEpy+uh3oFpF6s=</DigestValue>
+</Reference>
+<Reference URI="audio/2C.mp3">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>cr01cX+Fh/TuMijaDioYrbQVdnyRwXNZhMYFcFA68xo=</DigestValue>
+</Reference>
+<Reference URI="audio/2Cs.mp3">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>tXsZFBkCb9wC2e+kIMiJqXWolfdPnYZpK+Go2LzXCcI=</DigestValue>
+</Reference>
+<Reference URI="audio/2D.mp3">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>icPXlUGPaLP/2/9Pdv30Pq6TupkhXoqKp1xSO+4MF9k=</DigestValue>
+</Reference>
+<Reference URI="audio/2E.mp3">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>gGRY1uoyIkxZjRMANDyPSKaNSKDjx90MfHZsaHvrYxI=</DigestValue>
+</Reference>
+<Reference URI="audio/2F.mp3">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>Kqa77WO3xncLRM78wGNkFnwmazwRItlDHRTh3KAjSBE=</DigestValue>
+</Reference>
+<Reference URI="audio/2Fs.mp3">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>w5ltO4tQnT3Zxcx/brcghfsKjsVWR6XRqVfT0dVBMm8=</DigestValue>
+</Reference>
+<Reference URI="audio/2G.mp3">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>DC0nGfvZK23ql+7LNtVxw5ODe0Q9ZI7L+Gm431WOCbc=</DigestValue>
+</Reference>
+<Reference URI="audio/2Gs.mp3">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>ox+wEnlY7GdX/1pDvPWal1XkEmZw5WABSWvtmQm9ZwI=</DigestValue>
 </Reference>
 <Reference URI="css/style.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>/AZc/wS605aEh/0fXT4WrmMCmt6IqPji/lIvBKVcQw8=</DigestValue>
+<DigestValue>+8fF+i7fjKdJ15PVMtpJFZXTZ3gjtNJyxTKLEVQ2DK4=</DigestValue>
 </Reference>
-<Reference URI="js/music.js">
+<Reference URI="audio/2Ds.mp3">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>1qeKWmuTJlpKEQbYdkYgX8jRemv6sxlZfRlWK0VGzwQ=</DigestValue>
+<DigestValue>3aUvLyjCwvTiDJyPHNGvszpQHfBnFFXQvLjUpHCd9oQ=</DigestValue>
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>gbTFrBEM3xhrZ6/QG7y0SePtKbC7vtWLHg363vaA1/E=</DigestValue>
+<DigestValue>DNVqf3mgRl1GWQMBOC1cEVM81/bJsUNd9b9dWgqJUPQ=</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -95,9 +171,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-M+bQUoCNzqVKq0LYhVjbiQwtrmYrdqWW0af+osgPywwjcUJPJ0c5X9x9G7tLtHbacb/XgAfT8s2O
-5VU25BlkLEkyho5xLaxflAkVDq/lo6XfZ+tDikr6b7Psfyt75kaWey7gS/AwanzFcUVSsApjqTJz
-aoQ5G/U9Br1AmWheaj4=
+Y0iGeF+GqRpu2qJKjvCLIiRRe5/5/bJ1o8mPSC/CD9M8T4mBDcW1kGhVK/zqoi9plFurYOVwa4In
+1tTGugDbwBBKlx8bdQ3Vw5uFSgopheXGq0hXcP5hpoMUyih51YAO07AyCtL9cwl1TBEsQ+/eKaR1
+KEnXSfhsiOclqBxFNd4=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

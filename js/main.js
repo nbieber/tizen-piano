@@ -32,10 +32,10 @@ var app = (function ($) {
                 uri : a.data('uri')
             };
 
-            app.loadSound(file, function () {
+            //app.loadSound(file, function () {
             	console.log("playing");
                 app.playSound(a.data('name'));
-            });
+            //});
         };
 
         /* onVolumeChangeListener changes volume of the sound. */
@@ -59,11 +59,21 @@ var app = (function ($) {
             /* Initialize all lists. */
             $('.key').each(function() {
                 $(this).on('click', onListItemClickListener);
+                var a, file;
+
+                a = $(this);
+
+                file = {
+                    name : a.data('name'),
+                    uri : a.data('uri')
+                };
+                app.loadSound(file);
             });
 
             /* Initialize volume field. */
             $('#volume').on('change', onVolumeChangeListener);
 
+            
         };
 
         initializeUI();
