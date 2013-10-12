@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				margin: 0;
+			}
+
+			#piano {
+				position: relative;
+			}
+
+			.key {
+				border: 5px rgb(112, 112, 112) outset;
+				display: inline-block;	
+			}
+
+			.key.white {
+				background-color: white;
+				height: 200px;
+				width: 10%;
+			}
+
+			.key.white:active, .key.black:active{
+				border-style: solid;
+				border-color: black;
+			}
+
+			.key.black {
+				height: 120px;
+				width: 30px;
+				position: absolute;
+				top: 0;
+				background-color: black;
+				margin-left: -22px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="piano">
+			<div class="key white" onclick="playSound('audio/3C.mp3')"></div>
+			<div class="key black" onclick="playSound('audio/3Cs.mp3')"></div>
+			<div class="key white" onclick="playSound('audio/3D.mp3')"></div>
+			<div class="key black" onclick="playSound('audio/3Ds.mp3')"></div>
+			<div class="key white" onclick="playSound('audio/3E.mp3')"></div>
+			<div class="key white" onclick="playSound('audio/3F.mp3')"></div>
+			<div class="key black" onclick="playSound('audio/3Fs.mp3')"></div>
+			<div class="key white" onclick="playSound('audio/3G.mp3')"></div>
+			<div class="key black" onclick="playSound('audio/3Gs.mp3')"></div>
+			<div class="key white" onclick="playSound('audio/3A.mp3')"></div>
+			<div class="key black" onclick="playSound('audio/3As.mp3')"></div>
+			<div class="key white" onclick="playSound('audio/3B.mp3')"></div>
+			<div class="key white" onclick="playSound('audio/4C.mp3')"></div>
+			<span id="dummy"></span>
+		</div>
+		<div id="audio">
+
+		</div>
+
+		<script type="text/javascript" src="js/music.js"></script>
+	</body>
+</html>
+
